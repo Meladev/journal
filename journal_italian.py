@@ -3,17 +3,17 @@ import sys
 
 def info():
     f = open('che_faccio.txt', 'a')
-    f.write('\nQuesto è un diario dove puoi scrivere ciò che vuoi.\n\nNessuno legge ciò che scrivi quindi rispondi '
-            'sincera pls :).\n\nPremi INVIO '
-            'per saltare domanda/passare alla prossima.\n\nSpero tu stia bene, love you to the moon and back <3\n')
+    f.write('\nQuesto è un diario dove puoi scrivere ciò che vuoi.\n\nNessuno legge ciò che scrivi quindi sentiti '
+            'libero/a di rispondere sinceramente :).\n\nPremi INVIO '
+            'per saltare domanda/passare alla prossima.\n\nSpero tu stia bene, divertiti :)\n')
 
 
 info()
 
 
 def show_info():
-    aiuto = input('scrivi AAA se serve aiuto/invio se sei esperta... ')
-    if aiuto in 'aaa':
+    aiuto = input('scrivi "aiuto" se serve aiuto o premi INVIO se sai cosa fare... ')
+    if aiuto in 'aiuto':
         with open('che_faccio.txt', 'r') as f:
             f.seek(1)
             halp = f.read(225 - 1)
@@ -25,7 +25,7 @@ def idk():
     date = input('che giorno è oggi?... ')
     with open('diario.txt', 'a') as f:
         f.write(date + ' - ')
-        feelings = input('come stai?(sincera)... ')
+        feelings = input('come stai?(sinceramente)... ')
         f.write(feelings + '\n')
 
 
@@ -37,7 +37,7 @@ def altro():
     with open('diario.txt', 'a') as f:
         f.write('stesso giorno' + ' - ')
         f.write(more + '\n')
-    diario = input('vuoi vedere come sei stata in passato?(si/no)... ')
+    diario = input('vuoi vedere come sei stato/a in passato?(si/no)... ')
     while diario not in ('si', 'no'):
         diario = input('come prego?... ')
     if diario in 'no':
@@ -58,7 +58,7 @@ def altro():
 
 
 def test():
-    diario = input('vuoi vedere come sei stata in passato?(si/no) ')
+    diario = input('vuoi vedere come sei stato/a in passato?(si/no) ')
     while diario not in ('si', 'no'):
         diario = input('come prego? ')
     if diario in 'no':
